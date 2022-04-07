@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/css/main.7b9a131d.css",
+    "main.js": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/js/main.65efcee9.js",
+    "static/media/like.svg": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/media/like.d83eb578114ba118a233.svg",
+    "static/media/camera.svg": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/media/camera.ca6545dd41b4bcc45a12da6aea1709f9.svg",
+    "static/media/smile.svg": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/media/smile.31a544b2903f6efbee734678d3c85a9e.svg",
+    "static/media/comment.svg": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/media/comment.9f0ab876f6f25c2e42ab.svg",
+    "index.html": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/index.html",
+    "main.7b9a131d.css.map": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/css/main.7b9a131d.css.map",
+    "main.65efcee9.js.map": "/RA-hw.-9-Router.-1-Menu.-2-CRUD.-3-Authentication/static/js/main.65efcee9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b9a131d.css",
+    "static/js/main.65efcee9.js"
+  ]
+}
