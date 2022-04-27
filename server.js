@@ -15,7 +15,7 @@ app.use(async (ctx, next) => {
 	ctx.response.set('Access-Control-Allow-Methods', 'DELETE');
 
 	// Для разработки.
-	// ctx.response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+	ctx.response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
 
 	await next();
 });

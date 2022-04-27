@@ -5,39 +5,48 @@ const postsList = require('../src/postsList');
 const router = new Router();
 const posts = new Posts(postsList);
 
+const response = {
+	success: true,
+	error: null,
+	data: null,
+};
+
+const sendResponse = (ctx) => {
+	ctx.response.body = JSON.stringify(response);
+};
+
 router.get('/posts', async (ctx) => {
-	ctx.response.body = JSON.stringify(posts.list);
+	response.data = posts.list;
+	sendResponse(ctx);
 });
 
 router.get('/post/:id', async (ctx) => {
 	const { id } = ctx.params;
-	ctx.response.body = JSON.stringify(posts.getPost(id));
+	response.data = posts.getPost(id);
+	sendResponse(ctx);
 });
 
 router.post('/posts', async (ctx) => {
+	// Создать задержку при добавлении пользователя.
+	// await new Promise((resolve) => { setTimeout(() => resolve(), 3000); });
+
 	posts.addPost(ctx.request.body);
-	ctx.response.body = JSON.stringify({
-		success: true,
-		data: 'Post has been added.',
-	});
+	response.data = 'Post has been added.';
+	sendResponse(ctx);
 });
 
 router.post('/save', async (ctx) => {
 	const post = JSON.parse(ctx.request.body);
 	posts.savePost(post);
-	ctx.response.body = JSON.stringify({
-		success: true,
-		data: 'Post has been saved.',
-	});
+	response.data = 'Post has been saved.';
+	sendResponse(ctx);
 });
 
 router.delete('/posts/:id', async (ctx) => {
 	const { id } = ctx.params;
 	posts.deletePost(id);
-	ctx.response.body = JSON.stringify({
-		success: true,
-		data: 'Post has been deleted.',
-	});
+	response.data = 'Post has been deleted.';
+	sendResponse(ctx);
 });
 
 module.exports = { router };
