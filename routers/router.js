@@ -17,6 +17,7 @@ const sendResponse = (ctx) => {
 
 router.get('/posts', async (ctx) => {
 	response.data = posts.list;
+	console.log('router.get/posts response', response);
 	sendResponse(ctx);
 });
 
